@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:latlong/latlong.dart';
+import 'package:latlong2/latlong.dart';
 import 'package:flutter_map_mbtiles_provider/flutter_map_mbtiles_provider.dart';
 
 void main() {
@@ -51,7 +51,8 @@ class OfflineMBTilesMapPage extends StatelessWidget {
                 ),
                 layers: [
                   TileLayerOptions(
-                      tileProvider: MBTilesImageProvider.fromAsset('assets/berlin.mbtiles'),
+                      tileProvider: MBTilesImageProvider.fromAsset(
+                          'assets/berlin.mbtiles'),
                       maxZoom: 14.0,
                       backgroundColor: Colors.white,
                       tms: true),
